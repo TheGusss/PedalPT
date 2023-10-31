@@ -3,6 +3,14 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+
+        //MQTT Services Repository
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-releases/"
+        }
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+        }
     }
 }
 dependencyResolutionManagement {

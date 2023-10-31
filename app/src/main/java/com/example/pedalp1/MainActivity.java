@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Lista = (Spinner) findViewById(R.id.spnPreinstalados);
-        String [] Efectos = {"Clean", "Distortion", "Boost"};
+        String [] Efectos = {"Clean", "Distortion", "Super Crunch"};
         ArrayAdapter <String> AdaptadorEfecto = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, Efectos);
         Lista.setAdapter(AdaptadorEfecto);
 
