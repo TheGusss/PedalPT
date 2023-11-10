@@ -17,7 +17,7 @@ public class EnvioArduino {
         try {
             /* Configura la conexion y envio FTP */
             clienteftp.connect(IPESP32);
-            clienteftp.login("Usuario", "Contraseña");
+            clienteftp.login("esp32prueba", "12345678");
             clienteftp.enterLocalPassiveMode();
             clienteftp.setFileType(FTP.BINARY_FILE_TYPE);
 
@@ -39,7 +39,7 @@ public class EnvioArduino {
             FileInputStream ArchivoLocal = new FileInputStream(outputFile); //recoge el archivo .ino para enviarlo
 
             /* Se realiza el envio del archivo */
-            if (clienteftp.storeFile("Ruta/donde/almacena"+ NombreArchivo, ArchivoLocal))
+            if (clienteftp.storeFile("/upload"+ NombreArchivo, ArchivoLocal))
             {
                 System.out.println("Archivo cargado exitosamente en el ESP32.");
             } else {
