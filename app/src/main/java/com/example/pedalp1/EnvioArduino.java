@@ -18,7 +18,7 @@ public class EnvioArduino {
         try {
             // Configura la conexión y envío FTP
             clienteftp.connect(IPESP32,21);
-            clienteftp.login("esp32prueba", "12345678");
+            clienteftp.login("esp32", "12345678");
             clienteftp.enterLocalPassiveMode();
             clienteftp.setFileType(FTP.BINARY_FILE_TYPE);
 
